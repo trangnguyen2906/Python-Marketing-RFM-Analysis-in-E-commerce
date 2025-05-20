@@ -1,8 +1,7 @@
-# 📊 Project Title: [Your Project Name]  
-Author: [Your Name]  
+# 📊 Project Title: RFM Analysis
+Author: Nguyen Huyen Trang  
 Date: YYYY-MM-DD  
-Tools Used: SQL/ Python  
-
+Tools Used: Python
 ---
 
 ## 📑 Table of Contents  
