@@ -1,8 +1,8 @@
 # 📊 Project Title: RFM Analysis
-
 Author: Nguyen Huyen Trang  
 Date: YYYY-MM-DD  
 Tools Used: Python
+
 ---
 
 ## 📑 Table of Contents  
