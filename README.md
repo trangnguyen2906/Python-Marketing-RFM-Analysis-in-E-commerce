@@ -2,6 +2,7 @@
 - Author: [Your Name]
 - Date: YYYY-MM-DD
 - Tools Used: SQL/ Python
+  --------
 ## 📑 Table of Contents
 1. 📌 Background & Overview
 2. 📂 Dataset Description & Data Structure
