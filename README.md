@@ -46,7 +46,7 @@ This project uses Python to segment customers using the RFM (Recency – Frequen
 ### 📊 Data Structure & Relationships  
 
 #### 1️⃣ Tables Used:  
-The dataset contains 1 transactional table that includes both customer and product-level details.
+The dataset contains **1 transactional table** that includes both customer and product-level details.
 
 #### 2️⃣ Table Schema & Data Snapshot  
 
