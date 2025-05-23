@@ -9,26 +9,20 @@
 ## 📌 Background & Overview  
 ### 🧩 Project Context
 
-A global e-commerce company faced challenges in **targeting customer segments effectively**. The Marketing team wanted to reward loyal customers and identify those with high potential. However, customer segmentation was still done manually in Excel, which was time-consuming and insufficient for large-scale strategy.
+A global e-commerce company faced challenges in **targeting customer segments effectively**. The Marketing team wanted to reward loyal customers and identify those with high potential. However, customer segmentation was still done **manually in Excel**, which was **time-consuming** and **insufficient** for **large-scale strategy**.
 
 To solve this, I developed a RFM (Recency – Frequency – Monetary) analysis using Python. The solution empowers the Marketing team to launch **data-driven, personalized campaigns, prioritize high-value users, and improve retention.**
 
 ### Objective:
 ### 📖 What is this project about? What Business Question will it solve?
 
-Clearly outline what this project does, what business questions the project will solve. 
+This project uses Python to segment customers using the RFM (Recency – Frequency – Monetary) model and answers:
 
-- Provide a brief introduction - Write in bullet point format
-- Point out the main business question
+- 🔍 Who are the company’s most **valuable and loyal customers**?
+- 🚨 Which customers are likely to **churn or need re-engagement**?
+- 📣 How can we **optimize marketing campaigns** and **resource allocation** based on customer value?
 
-
- _Example:_
-  This project uses Python to analyze transaction data from KPMG to:
-
-✔️ Identify the behavior in customer's first transaction.  
-✔️ Provide actionable insights to increase retention rate   
- 
-
+🎯 The goal is to generate **actionable customer segments** that guide strategic **decisions in marketing, loyalty programs, and resource allocation**.
 
 ### 👤 Who is this project for?  
 
