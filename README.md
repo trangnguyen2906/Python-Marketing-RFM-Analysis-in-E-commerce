@@ -31,6 +31,7 @@ This project uses Python to segment customers using the RFM (Recency – Frequen
 📊 Data Analysts: exploring behavior-driven segmentation
 
 🧭 Business Decision Makers: planning resource allocation based on customer value
+
 ---
 
 ## 📂 Dataset Description & Data Structure  
