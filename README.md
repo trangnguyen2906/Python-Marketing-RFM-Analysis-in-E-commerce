@@ -9,7 +9,7 @@
 ## 📌 Background & Overview  
 ### 🧩 Project Context
 
-A global e-commerce company faced challenges in **targeting customer segments effectively**. The Marketing team wanted to reward loyal customers and identify those with high potential. However, customer segmentation was still done **manually in Excel**, which was **time-consuming** and **insufficient** for **large-scale strategy**.
+A **global e-commerce company** faced challenges in **targeting customer segments effectively**. The Marketing team wanted to reward loyal customers and identify those with high potential. However, customer segmentation was still done **manually in Excel**, which was **time-consuming** and **insufficient** for **large-scale strategy**.
 
 To solve this, I developed a RFM (Recency – Frequency – Monetary) analysis using Python. The solution empowers the Marketing team to launch **data-driven, personalized campaigns, prioritize high-value users, and improve retention.**
 
@@ -26,11 +26,11 @@ This project uses Python to segment customers using the RFM (Recency – Frequen
 
 ### 👤 Who is this project for?  
 
-💼 Marketing & CRM Teams: improving campaign precision and retention strategies
+💼 **Marketing & CRM Teams:** improving campaign precision and retention strategies
 
-📊 Data Analysts: exploring behavior-driven segmentation
+📊 **Data Analysts:** exploring behavior-driven segmentation
 
-🧭 Business Decision Makers: planning resource allocation based on customer value
+🧭 **Business Decision Makers:** planning resource allocation based on customer value
 
 ---
 
