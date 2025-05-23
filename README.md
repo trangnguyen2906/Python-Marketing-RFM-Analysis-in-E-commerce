@@ -37,36 +37,31 @@ This project uses Python to segment customers using the RFM (Recency – Frequen
 ## 📂 Dataset Description & Data Structure  
 
 ### 📌 Data Source  
-- Source: (Mention where the dataset is obtained from—Kaggle, company database, government sources, etc.)  
-- Size: (Mention the number of rows & columns)  
-- Format: (.csv, .sql, .xlsx, etc.)  
+- Source: UK-based online retail dataset (publicly available)
+- Time Period: 01/12/2010 – 09/12/2011
+- Size: ~541,909 rows × 8 columns
+- Format: .csv
+
 
 ### 📊 Data Structure & Relationships  
 
 #### 1️⃣ Tables Used:  
-Mention how many tables are in the dataset.  
+The dataset contains 1 transactional table that includes both customer and product-level details.
 
 #### 2️⃣ Table Schema & Data Snapshot  
 
-Table 1: Products Table  
+Table : Transaction Table
 
-👉🏻 Insert a screenshot of table schema 
-
-📌If the table is too big, only capture a part of it that contains key metrics you used in the projects or put the table in toggle
-
- _Example:_
-
-| Column Name | Data Type | Description |  
-|-------------|----------|-------------|  
-| Product_ID  | INT      | Unique identifier for each product |  
-| Name        | TEXT     | Product name |  
-| Category    | TEXT     | Product category |  
-| Price       | FLOAT    | Price per unit |  
-
-
-Table 2: Sales Transactions  
-
-👉🏻 Insert a screenshot of table schema.
+| Column Name   | Data Type | Description                                          |
+|---------------|-----------|------------------------------------------------------|
+| `InvoiceNo`   | Nominal   | Unique invoice number (starts with 'C' for cancelled orders) |
+| `StockCode`   | Nominal   | Unique identifier for each product                  |
+| `Description` | Nominal   | Name/description of the product                     |
+| `Quantity`    | Numeric   | Quantity of items per transaction                   |
+| `InvoiceDate` | DateTime  | Date and time of the transaction                    |
+| `UnitPrice`   | Numeric   | Price per item (in GBP)                             |
+| `CustomerID`  | Nominal   | Unique customer identifier                          |
+| `Country`     | Nominal   | Customer’s country of residence                     |
 
 
 ---
