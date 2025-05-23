@@ -26,15 +26,11 @@ This project uses Python to segment customers using the RFM (Recency – Frequen
 
 ### 👤 Who is this project for?  
 
-Mention who might benefit from this project 
+💼 Marketing & CRM Teams: improving campaign precision and retention strategies
 
- _Example:_
+📊 Data Analysts: exploring behavior-driven segmentation
 
-✔️ Data analysts & business analysts  
-✔️ Decision-makers & stakeholders  
-
-
-
+🧭 Business Decision Makers: planning resource allocation based on customer value
 ---
 
 ## 📂 Dataset Description & Data Structure  
