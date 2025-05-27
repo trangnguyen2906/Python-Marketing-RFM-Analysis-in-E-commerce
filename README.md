@@ -391,6 +391,8 @@ Loyal & VIP Customers show a quite strong positive Frequency–Monetary **correl
 #### 🔹 5. Convert Potential Customers → Loyal Customers
 > 🎯 Goal: Identify key behavioral gaps between mid-tier segments and top-performing customers to guide conversion strategies for turning potential customers into loyal ones.
 
+🧠 To do this, I compare mean and median values of Recency, Frequency, and Monetary, along with AOV (Average Order Value) to gain reliable insights into typical behavior (median) while still capturing value outliers (mean). This helps prioritize which segments have untapped value and how to upgrade them effectively.
+
 ```
 #mean, median of segments except at risk and lost customers
 comparison_df = RFM_df_merge[RFM_df_merge['Customer_Group'] != 'At Risk & Lost Customers']
@@ -410,6 +412,10 @@ plt.show()
 ```
 
 ![Segment Comparison Summary](https://drive.google.com/uc?id=1AQRoddcZa7PmMbnHXI5NPplu57Im0odG)
+
+🔍 **Key Findings:**
+- 📅 Recency: Potential Loyalists and New Customers made relatively recent purchases, similar to Loyal customers, indicating recent engagement and reactivation potential.
+- 💸 Monetary & AOV: Despite lower frequency, AOV for **Potential Loyalists** is fairly strong. This suggests they’re willing to spend but need encouragement to buy more often.
 
 ---
 
