@@ -241,14 +241,16 @@ RFM_df_merge
   
 ### 🔷 Visual Insights
 
+#### 🔹 1. Examine Distribution of RFM Metrics
+> 🎯 **Goal:** Understand general behavior across Recency, Frequency, and Monetary metrics to identify broad customer patterns.
 
-- First, explain codes' purpose - what they do
+![AOV by Segment](https://drive.google.com/uc?id=1v-cwnyVyOjP-4WtEhvFOHAtKQiOGvaEa)
 
-- Then how your query/ code & Insert screenshots of your result
+**🔍 Key Findings:**
+- ⏱️ **Recency:** Most customers made purchases within the last **50 days**, showing strong short-term engagement. However, there's a long tail of users who **haven't returned for 6+ months**.
+- 🔁 **Frequency:** Over **70%** of customers made **only one - two purchase**, revealing a significant retention issue and low repeat-buy behavior. **(KEY WEAKNESSES)**
+- 💰 **Monetary:** Spending is highly skewed. **Most customers** **spend little**, while a small number of high-value outliers generate the majority of revenue.
 
-- Finally, explain your observations/ findings from the results  ts findings
-  
- _Describe trends, key metrics, and patterns._  
 
 ---
 
