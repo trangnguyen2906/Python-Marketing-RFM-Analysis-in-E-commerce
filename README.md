@@ -414,8 +414,8 @@ plt.show()
 ![Segment Comparison Summary](https://drive.google.com/uc?id=1AQRoddcZa7PmMbnHXI5NPplu57Im0odG)
 
 🔍 **Key Findings:**
-- 📅 Recency: Potential Loyalists and New Customers made relatively recent purchases, similar to Loyal customers, indicating recent engagement and reactivation potential.
-- 💸 Monetary & AOV: Despite lower frequency, AOV for **Potential Loyalists** is fairly strong. This suggests they’re willing to spend but need encouragement to buy more often.
+- 📅 **Recency:** Potential Loyalists and New Customers made relatively recent purchases, similar to Loyal customers, indicating recent engagement and reactivation potential.
+- 💸 **Monetary & AOV:** Despite lower frequency, AOV for Potential Loyalists is fairly strong. This suggests they’re willing to spend but need encouragement to buy more often.
 
 ---
 
