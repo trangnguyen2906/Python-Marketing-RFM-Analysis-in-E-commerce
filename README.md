@@ -348,6 +348,38 @@ plt.show()
 - **💸 Revenue Contribution:** **Over 60%** of total revenue comes from **Champions alone**, followed by **Loyal and Need Attention** groups. Many segments (like Lost or New Customers) contribute little revenue despite notable size.
 - ⚠️ Strategic Gap: Some segments with high population (Hibernating, At Risk) offer low return, indicating **poor engagement or lack of effective retention strategies.**
 
+#### 🔹 2. Group Segments for Marketing Campaign Strategy
+> **🎯 Goal:** Reorganize the 11 original RFM segments into **3 broader customer groups** to simplify targeting and align marketing efforts with customer value and potential.
+
+```
+def regroup_segment(segment):
+    if segment in ['Champions', 'Loyal']:
+        return 'Loyal & VIP Customers'
+    elif segment in ['Potential Loyalist', 'New Customers', 'Promising', 'Need Attention']:
+        return 'Potential Customers'
+    else:
+        return 'At Risk & Lost Customers'
+
+RFM_df_merge['Customer_Group'] = RFM_df_merge['Segment'].apply(regroup_segment)
+RFM_df_merge
+
+plt.figure(figsize=(8, 5))
+sns.countplot(data=RFM_df_merge, x='Customer_Group', palette='Set2')
+plt.title('Customer Distribution by New Groups')
+plt.xticks(rotation=15)
+plt.show()
+```
+![Customer Distribution by New Groups](https://drive.google.com/uc?id=1HoAHVU734nGkNi4qCpvOgchsOlbnT9f0)
+
+🔍 **Key Findings:**
+
+- 🏆 **Group 1 – Loyal & VIP Customers**: Champions and Loyal customers with the **highest RFM scores (4–5)**. Small in number but **contribute ~75% of revenue**. Best targets for gratitude and loyalty-focused campaigns.
+
+- 🌱 **Group 2 – Potential Customers**: Includes Potential Loyalists, Promising, Need Attention, and New Customers. **Moderate RFM scores** with growth potential. Ideal for nurturing via personalized offers or engagement tactics.
+
+- ⚠️ **Group 3 – At Risk & Lost Customers**: At Risk, Cannot Lose Them, Hibernating, Lost, and About to Sleep segments. Low engagement or long inactivity. Costly to re-engage with uncertain returns.
+
+
 ---
 
 ## 🔎 Final Conclusion & Recommendations  
