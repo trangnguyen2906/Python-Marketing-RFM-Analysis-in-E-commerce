@@ -92,7 +92,36 @@ df['CustomerID'] = df['CustomerID'].astype('Int64')
 
 ```
 ![Check Datatypes Screenshot](https://drive.google.com/uc?id=1gE8RJjvgSughUgDIg1Sl88QxTXGS6nJI)
-    
+
+### 🔷 Check Data Values
+- The `Quantity` column contains **negative values**, which mostly correspond to **canceled orders** (identified by `InvoiceNo` starting with "C").
+  
+👉 These rows were removed to ensure accurate analysis.
+- The `UnitPrice` column also has **negative values**, which are likely due to data entry errors or refund transactions.
+  
+👉 These entries were also **excluded** from further processing.
+
+```
+# Check negative values in Quantity column
+df[df['Quantity'] < 0]
+  ## Almost negative value in Quantity col has InvoiceNo start with 'C' -> Check
+check_cancel = df['InvoiceNo'].str.startswith('C')
+negative_quan_cancel = df[(df['Quantity'] < 0) & (check_cancel == True)]
+  ### other negative quantity
+negative_quan_nocancel = df[(df['Quantity'] < 0) & (check_cancel == False)]
+
+#Check negative values in UnitPrice col
+df[df['UnitPrice'] < 0]
+
+#Drop rows that cancel and has negative values in Quantity column
+df = df[~((df['Quantity'] < 0) & (check_cancel == True))]
+#Drop negative values in UnitPrice col
+df = df[df['UnitPrice'] > 0]
+
+df.describe()
+
+```
+
 ### 🔷 Handle Missing & Duplicate Data
 
 ## 2️⃣ RFM Analysis Preprocess
