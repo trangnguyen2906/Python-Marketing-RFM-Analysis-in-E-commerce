@@ -388,6 +388,28 @@ plt.show()
 🔍 **Key Findings:**
 Loyal & VIP Customers show a quite strong positive Frequency–Monetary **correlation (crl = 0.55)**, while Potential Customers show no clear RFM relationships, indicating inconsistent and less predictable behavior.
 
+#### 🔹 5. Convert Potential Customers → Loyal Customers
+> 🎯 Goal: Identify key behavioral gaps between mid-tier segments and top-performing customers to guide conversion strategies for turning potential customers into loyal ones.
+
+```
+#mean, median of segments except at risk and lost customers
+comparison_df = RFM_df_merge[RFM_df_merge['Customer_Group'] != 'At Risk & Lost Customers']
+comparison_summary = comparison_df.groupby('Segment')[['Recency', 'Frequency', 'Monetary']].agg(['mean', 'median']).reset_index()
+comparison_summary.columns = ['_'.join(col).strip('_') for col in comparison_summary.columns.values]
+comparison_summary['AOV_mean'] = comparison_summary['Monetary_mean'] / comparison_summary['Frequency_mean']
+comparison_summary['AOV_median'] = comparison_summary['Monetary_median'] / comparison_summary['Frequency_median']
+comparison_summary
+
+fig, axes = plt.subplots(2, 2, figsize=(16, 10))
+sns.barplot(x='Recency_median', y='Segment', data=comparison_summary, ax=axes[0, 0], color='navy').set(title='Recency (Median)')
+sns.barplot(x='Frequency_median', y='Segment', data=comparison_summary, ax=axes[0, 1], color='green').set(title='Frequency (Median)')
+sns.barplot(x='Monetary_median', y='Segment', data=comparison_summary, ax=axes[1, 0], color='orange').set(title='Monetary (Median)')
+sns.barplot(x='AOV_median', y='Segment', data=comparison_summary, ax=axes[1, 1], color='darkred').set(title='AOV (Median)')
+plt.tight_layout()
+plt.show()
+```
+
+![Segment Comparison Summary](https://drive.google.com/uc?id=1AQRoddcZa7PmMbnHXI5NPplu57Im0odG)
 
 ---
 
