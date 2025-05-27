@@ -218,7 +218,7 @@ RFM_df
 
 ## 3️⃣ Customer Segmentation & Visualization
 ### 🔷 Segment Customers
-- Customers were grouped into **11 segments** based on their RFM scores.
+- Customers were divided into **11 RFM-based segments** (e.g., 🏆 Champions, 🌱 Potential Loyalists, ⚠️ At Risk) to guide **personalized marketing and loyalty-focused strategies.**
 
 ```
 #Segment Customers
