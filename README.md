@@ -69,10 +69,29 @@ Table : Transaction Table
 ## ⚒️ Main Process
 
 ## 1️⃣ Exploratory Data Analysis (EDA)
-### 🔷 Check Data Values & Types
-- Performed initial data inspection:
+### 🔷 Check Data Types
+- Performed **initial data inspection**:
   +   Verified datatypes and structure of dataset
-  +   Identified invalid entries and anomalies in data (e.g., negative quantities, zero unit price)
+  +   Identified **invalid entries and anomalies in data** (e.g., negative quantities, zero unit price)
+
+```
+# Check datatypes
+print(df.info())
+# Check numerical data
+print(df.describe())
+df.head()
+
+#StockCode, Description, Country, InvoiceNo -- Datatype: String
+df = df.astype({'StockCode':'string', 'Description':'string', 'Country':'string', 'InvoiceNo': 'string'})
+#InvoiceDate -- datetime
+df['InvoiceDate'] = df['InvoiceDate'].astype('datetime64[ns]')
+#UnitPrice -- float
+df['UnitPrice'] = df['UnitPrice'].str.replace(',','.').astype('float')
+#CustomerID -- int64
+df['CustomerID'] = df['CustomerID'].astype('Int64')
+
+```
+![Check Datatypes Screenshot](https://drive.google.com/uc?id=1gE8RJjvgSughUgDIg1Sl88QxTXGS6nJI)
     
 ### 🔷 Handle Missing & Duplicate Data
 
