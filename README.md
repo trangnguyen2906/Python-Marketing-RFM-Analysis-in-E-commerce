@@ -125,6 +125,44 @@ df.describe()
 ![Data Values Screenshot](https://drive.google.com/uc?id=1Mpr6TEZuKCyI02VNSF1YiYa-SiGKzDoi)
 
 ### 🔷 Handle Missing & Duplicate Data
+👉 **Detect missing data**
+
+- Missing values were found **only** in the **`CustomerID` column.**
+- These missing `CustomerIDs` are **not related to canceled transactions.**
+- The majority of these null entries come from customers in the **United Kingdom.**
+
+```
+check_null = pd.DataFrame(df.isnull().sum())
+check_null['%missing'] = check_null[0] / len(df) * 100
+check_null.columns = ['count', '%missing']
+check_null # Missing many values in CustomerID column (~25%)
+
+## Check if missing CustomerIDs are related to cancelled transactions
+cancelled = df[df['CustomerID'].isnull() & df['InvoiceNo'].str.startswith('C')]
+print(cancelled)
+
+## Check if missing CustomerIDs are linked to specific countries
+missing_countries = df[df['CustomerID'].isnull()]['Country'].value_counts()
+print("\nCountries with missing CustomerID:\n", missing_countries)
+
+check_missing['MonthYear'] = df['InvoiceDate'].dt.to_period('M')
+# Count missing CustomerID per month
+missing_by_month = check_missing[check_missing['CustomerID'].isnull()]['MonthYear'].value_counts().sort_index()
+print(missing_by_month)
+
+```
+
+👉 **Dealing with missing and duplicate data**
+- **Missing values:** Only customerID is missing -> Doing RFM model need to group based on CustomerID --> **Drop** 25% missing value in CustomerID col
+- **Duplicate data:** **drop** duplicated rows
+
+```
+# Missing values
+df = df.dropna(subset=['CustomerID'])
+# Duplicated rows
+df_clean = df.drop_duplicates().copy()
+df_clean.isnull().sum()
+```
 
 ## 2️⃣ RFM Analysis Preprocess
 ### 🔷 RFM Calculation
