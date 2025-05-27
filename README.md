@@ -386,7 +386,7 @@ plt.show()
 
 
 🔍 **Key Findings:**
-Loyal & VIP Customers show a strong Frequency–Monetary **correlation (crl = 0.55)**, while Potential Customers show no clear RFM relationships, indicating inconsistent and less predictable behavior.
+Loyal & VIP Customers show a quite strong positive Frequency–Monetary **correlation (crl = 0.55)**, while Potential Customers show no clear RFM relationships, indicating inconsistent and less predictable behavior.
 
 
 ---
