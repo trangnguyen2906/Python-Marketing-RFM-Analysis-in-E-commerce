@@ -341,7 +341,8 @@ plt.axis('off')
 plt.show()
 ```
 
-![Segment Distribution by Count and Revenue](https://drive.google.com/uc?id=1RbW4jIYl28DkUkrFg-S1wzXrPFNEu7j2)
+![Group Distribution - Treemap](https://drive.google.com/uc?id=1kTVZG1iUm15hNyvoyTHJrtFBN8QccGtv)  
+![Group Distribution - Bar Chart](https://drive.google.com/uc?id=1yp8EwUw_AKXoV2RYuYlFKBI_oD8BwsP8)
 
 🔍 Key Findings:
 - 👥 **Customer Count:** The majority of customers fall into **mid-tier segments** like **Need Attention, Potential Loyalists, and At Risk**, suggesting potential for growth or re-engagement.
