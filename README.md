@@ -68,9 +68,22 @@ Table : Transaction Table
 
 ## ⚒️ Main Process
 
-1️⃣ Data Cleaning & Preprocessing  
-2️⃣ Exploratory Data Analysis (EDA)  
-3️⃣ SQL/ Python Analysis 
+## 1️⃣ Exploratory Data Analysis (EDA)
+### 🔷 Check Data Values & Types
+- Performed initial data inspection:
+  +   Verified datatypes and structure of dataset
+  +   Identified invalid entries and anomalies in data (e.g., negative quantities, zero unit price)
+    
+### 🔷 Handle Missing & Duplicate Data
+
+## 2️⃣ RFM Analysis Preprocess
+### 🔷 RFM Calculation
+### 🔷 RFM Score
+
+## 3️⃣ Customer Segmentation & Visualization
+### 🔷 Segment Customers
+### 🔷 Visual Insights
+
 
 - First, explain codes' purpose - what they do
 
