@@ -122,6 +122,8 @@ df.describe()
 
 ```
 
+![Data Values Screenshot](https://drive.google.com/uc?id=1Mpr6TEZuKCyI02VNSF1YiYa-SiGKzDoi)
+
 ### 🔷 Handle Missing & Duplicate Data
 
 ## 2️⃣ RFM Analysis Preprocess
