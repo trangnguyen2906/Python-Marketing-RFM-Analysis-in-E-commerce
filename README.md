@@ -218,6 +218,27 @@ RFM_df
 
 ## 3️⃣ Customer Segmentation & Visualization
 ### 🔷 Segment Customers
+- Customers were grouped into **11 segments** based on their RFM scores.
+
+```
+#Segment Customers
+segment = pd.read_csv('/content/drive/MyDrive/UNIGAP/Python/Final Project/segmentation.csv')
+segment['RFM Score'] = segment['RFM Score'].str.split(',')
+# Tách array của RFM score
+segment = segment.explode('RFM Score').reset_index().drop(columns=['index'])
+segment
+
+#Mapping with RFM_df
+RFM_df['RFM_score'] = RFM_df['RFM_score'].astype(str).str.strip()
+segment['RFM Score'] = segment['RFM Score'].astype(str).str.strip()
+RFM_df_merge = RFM_df.merge(segment, left_on='RFM_score', right_on='RFM Score', how='left')
+RFM_df_merge
+
+```
+
+![Mapping](https://drive.google.com/uc?id=1OSQB1qa64aTvfOwr5sKSip2bzQKWqo5t)
+
+  
 ### 🔷 Visual Insights
 
 
