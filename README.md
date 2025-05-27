@@ -348,7 +348,7 @@ plt.show()
 - **💸 Revenue Contribution:** **Over 60%** of total revenue comes from **Champions alone**, followed by **Loyal and Need Attention** groups. Many segments (like Lost or New Customers) contribute little revenue despite notable size.
 - ⚠️ Strategic Gap: Some segments with high population (Hibernating, At Risk) offer low return, indicating **poor engagement or lack of effective retention strategies.**
 
-#### 🔹 2. Group Segments for Marketing Campaign Strategy
+#### 🔹 3. Group Segments for Marketing Campaign Strategy
 > **🎯 Goal:** Reorganize the 11 original RFM segments into **3 broader customer groups** to simplify targeting and align marketing efforts with customer value and potential.
 
 ```
@@ -378,6 +378,15 @@ plt.show()
 - 🌱 **Group 2 – Potential Customers**: Includes Potential Loyalists, Promising, Need Attention, and New Customers. **Moderate RFM scores** with growth potential. Ideal for nurturing via personalized offers or engagement tactics.
 
 - ⚠️ **Group 3 – At Risk & Lost Customers**: At Risk, Cannot Lose Them, Hibernating, Lost, and About to Sleep segments. Low engagement or long inactivity. Costly to re-engage with uncertain returns.
+
+#### 🔹 4. Correlation Between RFM Metrics in Each Group
+> 🎯 Goal: Analyze how Recency, Frequency, and Monetary values relate to each other within different customer groups to uncover consistent behavioral patterns or weak links.
+
+![Recency Frequency Monetary AOV by Segment](https://drive.google.com/uc?id=1dl3XB0mKmQQtvl2KaEZyM_M7Ma8unNEo)
+
+
+🔍 **Key Findings:**
+Loyal & VIP Customers show a strong Frequency–Monetary **correlation (crl = 0.55)**, while Potential Customers show no clear RFM relationships, indicating inconsistent and less predictable behavior.
 
 
 ---
