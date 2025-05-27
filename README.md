@@ -244,12 +244,101 @@ RFM_df_merge
 #### 🔹 1. Examine Distribution of RFM Metrics
 > 🎯 **Goal:** Understand general behavior across Recency, Frequency, and Monetary metrics to identify broad customer patterns.
 
+```
+fig, ax = plt.subplots(figsize=(10, 6))
+color=sns.color_palette('Blues')[3]
+sns.histplot(RFM_df_merge['Recency'], ax=ax, kde=True, stat='density', color = color , edgecolor='black')  # add binwidth
+ax.set(xlabel='Recency', ylabel='Distribution', title='Distribution of Recency')
+plt.show()
+
+fig, ax = plt.subplots(figsize=(10, 6))
+color=sns.color_palette('Blues')[3]
+sns.histplot(RFM_df_merge['Frequency'], ax=ax, kde=True, stat='density',
+             binwidth=1, color = color , edgecolor='black')  # add binwidth
+ax.set(xlabel='Frequency', ylabel='Distribution', xlim=(0, 20), title='Distribution of Frequency')
+plt.show()
+
+fig, ax = plt.subplots(figsize=(10, 6))
+color=sns.color_palette('Blues')[3]
+sns.histplot(RFM_df_merge['Monetary'], ax=ax, kde=True, stat='density',color = color , edgecolor='black', binwidth = 500)  # add binwidth
+ax.set(xlabel='Monetary', ylabel='Distribution', xlim = (-1000,15000), title='Distribution of Monetary')
+plt.show()
+```
+
 ![AOV by Segment](https://drive.google.com/uc?id=1v-cwnyVyOjP-4WtEhvFOHAtKQiOGvaEa)
 
 **🔍 Key Findings:**
 - ⏱️ **Recency:** Most customers made purchases within the last **50 days**, showing strong short-term engagement. However, there's a long tail of users who **haven't returned for 6+ months**.
 - 🔁 **Frequency:** Over **70%** of customers made **only one - two purchase**, revealing a significant retention issue and low repeat-buy behavior. **(KEY WEAKNESSES)**
 - 💰 **Monetary:** Spending is highly skewed. **Most customers** **spend little**, while a small number of high-value outliers generate the majority of revenue.
+  
+#### 🔹 2. Segment Distribution by Count and Revenue
+
+```
+segment_counts = RFM_df_merge['Segment'].value_counts()
+total = segment_counts.sum()
+labels = [f"{seg}\n({count*100/total:.1f}%)"
+          for seg, count in zip(segment_counts.index, segment_counts.values)]
+
+# Create subplots
+fig, axes = plt.subplots(1, 2, figsize=(20, 8))  # 1 row, 2 columns
+
+# Left: Treemap
+squarify.plot(sizes=segment_counts.values,
+              label=labels,
+              color=sns.color_palette('Paired'),
+              pad=True,
+              alpha=0.8,
+              ax=axes[0])
+axes[0].set_title('Treemap of Customer Segments')
+axes[0].axis('off')
+
+#Right: Bar Chart
+bar = sns.countplot(data=RFM_df_merge,
+                    x='Segment',
+                    order=segment_counts.index,
+                    palette='Paired',
+                    ax=axes[1])
+axes[1].set_title('Number of Customers in Each Segment')
+axes[1].set_xlabel('Customer Segment')
+axes[1].set_ylabel('Number of Customers')
+axes[1].tick_params(axis='x', rotation=45)
+
+# Add data labels
+for p in bar.patches:
+    height = p.get_height()
+    axes[1].text(p.get_x() + p.get_width() / 2,
+                 height + 10,
+                 f'{height:.0f}',
+                 ha='center',
+                 fontsize=9)
+
+plt.tight_layout()
+plt.show()
+
+
+Monetary_total = RFM_df_merge.groupby('Segment')['Monetary'].sum()
+
+# Tính tổng Monetary toàn bộ
+total = RFM_df_merge['Monetary'].sum()
+
+# Tạo labels với % đóng góp
+labels = [f"{seg}\n ({count*100/total:.1f}%)"
+          for seg, count in zip(Monetary_total.index, Monetary_total.values)]
+
+# Treemap
+plt.figure(figsize=(14, 8))
+squarify.plot(
+    sizes=Monetary_total.values,
+    label=labels,
+    color=sns.color_palette('Paired'),
+    pad=True,
+    alpha=0.9
+)
+plt.title('Treemap of Customer Segments by Total Revenue', fontsize=14)
+plt.axis('off')
+plt.show()
+```
 
 
 ---
