@@ -151,6 +151,7 @@ missing_by_month = check_missing[check_missing['CustomerID'].isnull()]['MonthYea
 print(missing_by_month)
 
 ```
+![Missing Values Screenshot](https://drive.google.com/uc?id=1nuU1tQSycOyaYMbv3agmEpGy3MgWBl7T)
 
 👉 **Dealing with missing and duplicate data**
 - **Missing values:** Only customerID is missing -> Doing RFM model need to group based on CustomerID --> **Drop** 25% missing value in CustomerID col
