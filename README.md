@@ -423,7 +423,7 @@ plt.show()
 
 👉🏻 Based on the RFM analysis and behavioral insights above, I would recommend the following targeted strategies to the Marketing Team and the Product/CRM Team:
 
-📌 Recommendations for the **Marketing Team** to run effective gratitude campaign to customers: should focus on high-impact segments and deploy tailored campaign methods
+📌 Recommendations for the **Marketing Team** to run effective gratitude campaign: should focus on **high-impact segments** and **deploy tailored campaign methods**
 
 ✔️ **Campaign Target Priorities:** Focus loyalty and gratitude campaigns on Champions and Loyal customers (Group 1)
 - Why: Small in size but contribute ~75% of total revenue
