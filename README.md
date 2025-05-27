@@ -247,7 +247,7 @@ RFM_df_merge
 ```
 fig, ax = plt.subplots(figsize=(10, 6))
 color=sns.color_palette('Blues')[3]
-sns.histplot(RFM_df_merge['Recency'], ax=ax, kde=True, stat='density', color = color , edgecolor='black')  # add binwidth
+sns.histplot(RFM_df_merge['Recency'], ax=ax, kde=True, stat='density', color = color , edgecolor='black')
 ax.set(xlabel='Recency', ylabel='Distribution', title='Distribution of Recency')
 plt.show()
 
@@ -260,7 +260,7 @@ plt.show()
 
 fig, ax = plt.subplots(figsize=(10, 6))
 color=sns.color_palette('Blues')[3]
-sns.histplot(RFM_df_merge['Monetary'], ax=ax, kde=True, stat='density',color = color , edgecolor='black', binwidth = 500)  # add binwidth
+sns.histplot(RFM_df_merge['Monetary'], ax=ax, kde=True, stat='density',color = color , edgecolor='black', binwidth = 500)
 ax.set(xlabel='Monetary', ylabel='Distribution', xlim = (-1000,15000), title='Distribution of Monetary')
 plt.show()
 ```
@@ -273,6 +273,7 @@ plt.show()
 - 💰 **Monetary:** Spending is highly skewed. **Most customers** **spend little**, while a small number of high-value outliers generate the majority of revenue.
   
 #### 🔹 2. Segment Distribution by Count and Revenue
+> 🎯 **Goal:** Compare customer segments based on their **population size** and **revenue contribution** to identify which groups are most valuable and which ones require re-evaluation.
 
 ```
 segment_counts = RFM_df_merge['Segment'].value_counts()
@@ -340,6 +341,12 @@ plt.axis('off')
 plt.show()
 ```
 
+![Segment Distribution by Count and Revenue](https://drive.google.com/uc?id=1RbW4jIYl28DkUkrFg-S1wzXrPFNEu7j2)
+
+🔍 Key Findings:
+- 👥 **Customer Count:** The majority of customers fall into **mid-tier segments** like **Need Attention, Potential Loyalists, and At Risk**, suggesting potential for growth or re-engagement.
+- **💸 Revenue Contribution:** **Over 60%** of total revenue comes from **Champions alone**, followed by **Loyal and Need Attention** groups. Many segments (like Lost or New Customers) contribute little revenue despite notable size.
+- ⚠️ Strategic Gap: Some segments with high population (Hibernating, At Risk) offer low return, indicating **poor engagement or lack of effective retention strategies.**
 
 ---
 
