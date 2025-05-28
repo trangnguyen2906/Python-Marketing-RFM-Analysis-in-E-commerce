@@ -434,4 +434,3 @@ plt.show()
 - Why: Strong Average Order Value (AOV) but have low purchase frequency, indicating untapped potential.
 - Some tactics: Email remarketing and personalized follow-up after first or second purchase; Limited-time discounts or “Buy again and save” offers.
   
-✔️ Recommendation 3
