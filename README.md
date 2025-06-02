@@ -74,7 +74,7 @@ Table : Transaction Table
   +   Verified datatypes and structure of dataset
   +   Identified **invalid entries and anomalies in data** (e.g., negative quantities, zero unit price)
 
-```
+```python
 # Check datatypes
 print(df.info())
 # Check numerical data
@@ -101,7 +101,7 @@ df['CustomerID'] = df['CustomerID'].astype('Int64')
   
 👉 These entries were also **excluded** from further processing.
 
-```
+```python
 # Check negative values in Quantity column
 df[df['Quantity'] < 0]
   ## Almost negative value in Quantity col has InvoiceNo start with 'C' -> Check
@@ -131,7 +131,7 @@ df.describe()
 - These missing `CustomerIDs` are **not related to canceled transactions.**
 - The majority of these null entries come from customers in the **United Kingdom.**
 
-```
+```python
 check_null = pd.DataFrame(df.isnull().sum())
 check_null['%missing'] = check_null[0] / len(df) * 100
 check_null.columns = ['count', '%missing']
@@ -174,7 +174,7 @@ df_clean.isnull().sum()
 - RFM values were computed using customer-level transaction aggregation.
 - Recency was **reversed** to align with the scoring logic: **More recent = higher score.**
 
-```
+```python
 df_clean['Date'] = df_clean['InvoiceDate'].dt.normalize()
 df_clean['MonthYear'] = df_clean['InvoiceDate'].dt.to_period('M')
 df_clean['Cost'] = df_clean['Quantity']*df_clean['UnitPrice']
@@ -204,7 +204,7 @@ RFM_df.head()
   +   Higher Frequency & Monetary → higher scores
 - Scores were concatenated into a 3-digit RFM score
 
-```
+```python
 #Calculate RFM score
 RFM_df['R_score'] = pd.qcut(RFM_df['Recency'], 5, labels=[5, 4, 3, 2, 1]).astype(str)
 RFM_df['F_score'] = pd.qcut(RFM_df['Frequency'].rank(method='first'), 5, labels=[1, 2, 3, 4, 5]).astype(str)
@@ -220,7 +220,7 @@ RFM_df
 ### 🔷 Segment Customers
 - Customers were divided into **11 RFM-based segments** (e.g., 🏆 Champions, 🌱 Potential Loyalists, ⚠️ At Risk) to guide **personalized marketing and loyalty-focused strategies.**
 
-```
+```python
 #Segment Customers
 segment = pd.read_csv('/content/drive/MyDrive/UNIGAP/Python/Final Project/segmentation.csv')
 segment['RFM Score'] = segment['RFM Score'].str.split(',')
@@ -244,7 +244,7 @@ RFM_df_merge
 #### 🔹 1. Examine Distribution of RFM Metrics
 > 🎯 **Goal:** Understand general behavior across Recency, Frequency, and Monetary metrics to identify broad customer patterns.
 
-```
+```python
 fig, ax = plt.subplots(figsize=(10, 6))
 color=sns.color_palette('Blues')[3]
 sns.histplot(RFM_df_merge['Recency'], ax=ax, kde=True, stat='density', color = color , edgecolor='black')
@@ -275,7 +275,7 @@ plt.show()
 #### 🔹 2. Segment Distribution by Count and Revenue
 > 🎯 **Goal:** Compare customer segments based on their **population size** and **revenue contribution** to identify which groups are most valuable and which ones require re-evaluation.
 
-```
+```python
 segment_counts = RFM_df_merge['Segment'].value_counts()
 total = segment_counts.sum()
 labels = [f"{seg}\n({count*100/total:.1f}%)"
@@ -351,7 +351,7 @@ plt.show()
 #### 🔹 3. Group Segments for Marketing Campaign Strategy
 > **🎯 Goal:** Reorganize the 11 original RFM segments into **3 broader customer groups** to simplify targeting and align marketing efforts with customer value and potential.
 
-```
+```python
 def regroup_segment(segment):
     if segment in ['Champions', 'Loyal']:
         return 'Loyal & VIP Customers'
@@ -393,7 +393,7 @@ Loyal & VIP Customers show a quite strong positive Frequency–Monetary **correl
 
 🧠 To do this, I compare mean and median values of Recency, Frequency, and Monetary, along with AOV (Average Order Value) to gain reliable insights into typical behavior (median) while still capturing value outliers (mean). This helps prioritize which segments have untapped value and how to upgrade them effectively.
 
-```
+```python
 #mean, median of segments except at risk and lost customers
 comparison_df = RFM_df_merge[RFM_df_merge['Customer_Group'] != 'At Risk & Lost Customers']
 comparison_summary = comparison_df.groupby('Segment')[['Recency', 'Frequency', 'Monetary']].agg(['mean', 'median']).reset_index()
