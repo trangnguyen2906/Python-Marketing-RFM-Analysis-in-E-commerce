@@ -16,8 +16,13 @@ To solve this, I developed a RFM (Recency – Frequency – Monetary) analysis u
 ### Objective:
 ### 📖 What is this project about? What Business Question will it solve?
 
-This project uses Python to segment customers using the **RFM (Recency – Frequency – Monetary) model** and answers:
+This project uses Python to segment customers using the **RFM (Recency – Frequency – Monetary) model** , a proven marketing analysis technique that evaluates customers based on:
 
+- **Recency:** How recently a customer made a purchase
+- **Frequency****:** How often they purchase
+- **Monetary:** How much they spend
+- 
+RFM analysis helps identify customer behavior patterns and enables businesses to **tailor strategies** accordingly. This project addresses the following **key business questions**:
 - 🔍 Who are the company’s most **valuable and loyal customers**?
 - 🚨 Which customers are likely to **churn or need re-engagement**?
 - 📣 How can we **optimize marketing campaigns** and **resource allocation** based on customer value?
