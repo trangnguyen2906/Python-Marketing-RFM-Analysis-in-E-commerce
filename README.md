@@ -53,7 +53,7 @@ The dataset contains **1 transactional table** that includes both customer and p
 #### 2️⃣ Table Schema  
 
 <details>
-<summary>📊 <strong>Table Schema: Transaction Table</strong></summary>
+<summary> <strong>Transaction Table</strong></summary>
 
 | Column Name   | Data Type | Description                                                        |
 |---------------|-----------|--------------------------------------------------------------------|
@@ -68,8 +68,6 @@ The dataset contains **1 transactional table** that includes both customer and p
 
 </details>
 
-
----
 
 ## ⚒️ Main Process
 
