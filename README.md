@@ -52,18 +52,21 @@ The dataset contains **1 transactional table** that includes both customer and p
 
 #### 2️⃣ Table Schema  
 
-Table : Transaction Table
+<details>
+<summary>📊 <strong>Table Schema: Transaction Table</strong></summary>
 
-| Column Name   | Data Type | Description                                          |
-|---------------|-----------|------------------------------------------------------|
-| `InvoiceNo`   | Nominal   | Unique invoice number (starts with 'C' for cancelled orders) |
-| `StockCode`   | Nominal   | Unique identifier for each product                  |
-| `Description` | Nominal   | Name/description of the product                     |
-| `Quantity`    | Numeric   | Quantity of items per transaction                   |
-| `InvoiceDate` | DateTime  | Date and time of the transaction                    |
-| `UnitPrice`   | Numeric   | Price per item (in GBP)                             |
-| `CustomerID`  | Nominal   | Unique customer identifier                          |
-| `Country`     | Nominal   | Customer’s country of residence                     |
+| Column Name   | Data Type | Description                                                        |
+|---------------|-----------|--------------------------------------------------------------------|
+| `InvoiceNo`   | Nominal   | Unique invoice number (starts with ‘C’ for cancelled orders)       |
+| `StockCode`   | Nominal   | Unique identifier for each product                                |
+| `Description` | Nominal   | Name/description of the product                                   |
+| `Quantity`    | Numeric   | Quantity of items per transaction                                 |
+| `InvoiceDate` | DateTime  | Date and time of the transaction                                  |
+| `UnitPrice`   | Numeric   | Price per item (in GBP)                                           |
+| `CustomerID`  | Nominal   | Unique customer identifier                                        |
+| `Country`     | Nominal   | Customer’s country of residence                                   |
+
+</details>
 
 
 ---
