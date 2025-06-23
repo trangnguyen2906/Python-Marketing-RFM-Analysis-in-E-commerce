@@ -77,7 +77,7 @@ The dataset contains **1 transactional table** that includes both customer and p
   +   Verified datatypes and structure of dataset
   +   Identified **invalid entries and anomalies in data** (e.g., negative quantities, zero unit price)
 
-![Check Datatypes Screenshot](https://drive.google.com/uc?id=1gE8RJjvgSughUgDIg1Sl88QxTXGS6nJI)
+![Your Image](https://drive.google.com/uc?export=view&id=1AYQHthnbtbJx0PL96k2K7RiZumgLaPz6)
 
 ### 🔷 Check Data Values
 - The `Quantity` column contains **negative values**, which mostly correspond to **canceled orders** (identified by `InvoiceNo` starting with "C").
