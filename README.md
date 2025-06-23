@@ -88,7 +88,7 @@ The dataset contains **1 transactional table** that includes both customer and p
 👉 These entries were also **excluded** from further processing.
 
 
-![Data Values Screenshot](https://drive.google.com/uc?id=1Mpr6TEZuKCyI02VNSF1YiYa-SiGKzDoi)
+![Data values](https://drive.google.com/uc?export=view&id=1Hz6jg3dagY4QgPde-kzTH0vj0Z5TgytS)
 
 ### 🔷 Handle Missing & Duplicate Data
 👉 **Detect missing data**
