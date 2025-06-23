@@ -1,4 +1,4 @@
-# 📊 Segment E-commerce Customers via RFM Analysis Using Python 
+# 📊 Segment E-commerce Customers for Marketing via RFM Analysis Using Python 
 ## 📑 Table of Contents  
 1. [📌 Background & Overview](#-background--overview)  
 2. [📂 Dataset Description & Data Structure](#-dataset-description--data-structure)  
