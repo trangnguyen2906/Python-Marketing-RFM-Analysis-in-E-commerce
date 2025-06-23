@@ -77,23 +77,6 @@ The dataset contains **1 transactional table** that includes both customer and p
   +   Verified datatypes and structure of dataset
   +   Identified **invalid entries and anomalies in data** (e.g., negative quantities, zero unit price)
 
-```python
-# Check datatypes
-print(df.info())
-# Check numerical data
-print(df.describe())
-df.head()
-
-#StockCode, Description, Country, InvoiceNo -- Datatype: String
-df = df.astype({'StockCode':'string', 'Description':'string', 'Country':'string', 'InvoiceNo': 'string'})
-#InvoiceDate -- datetime
-df['InvoiceDate'] = df['InvoiceDate'].astype('datetime64[ns]')
-#UnitPrice -- float
-df['UnitPrice'] = df['UnitPrice'].str.replace(',','.').astype('float')
-#CustomerID -- int64
-df['CustomerID'] = df['CustomerID'].astype('Int64')
-
-```
 ![Check Datatypes Screenshot](https://drive.google.com/uc?id=1gE8RJjvgSughUgDIg1Sl88QxTXGS6nJI)
 
 ### 🔷 Check Data Values
@@ -104,26 +87,6 @@ df['CustomerID'] = df['CustomerID'].astype('Int64')
   
 👉 These entries were also **excluded** from further processing.
 
-```python
-# Check negative values in Quantity column
-df[df['Quantity'] < 0]
-  ## Almost negative value in Quantity col has InvoiceNo start with 'C' -> Check
-check_cancel = df['InvoiceNo'].str.startswith('C')
-negative_quan_cancel = df[(df['Quantity'] < 0) & (check_cancel == True)]
-  ### other negative quantity
-negative_quan_nocancel = df[(df['Quantity'] < 0) & (check_cancel == False)]
-
-#Check negative values in UnitPrice col
-df[df['UnitPrice'] < 0]
-
-#Drop rows that cancel and has negative values in Quantity column
-df = df[~((df['Quantity'] < 0) & (check_cancel == True))]
-#Drop negative values in UnitPrice col
-df = df[df['UnitPrice'] > 0]
-
-df.describe()
-
-```
 
 ![Data Values Screenshot](https://drive.google.com/uc?id=1Mpr6TEZuKCyI02VNSF1YiYa-SiGKzDoi)
 
@@ -134,39 +97,11 @@ df.describe()
 - These missing `CustomerIDs` are **not related to canceled transactions.**
 - The majority of these null entries come from customers in the **United Kingdom.**
 
-```python
-check_null = pd.DataFrame(df.isnull().sum())
-check_null['%missing'] = check_null[0] / len(df) * 100
-check_null.columns = ['count', '%missing']
-check_null # Missing many values in CustomerID column (~25%)
-
-## Check if missing CustomerIDs are related to cancelled transactions
-cancelled = df[df['CustomerID'].isnull() & df['InvoiceNo'].str.startswith('C')]
-print(cancelled)
-
-## Check if missing CustomerIDs are linked to specific countries
-missing_countries = df[df['CustomerID'].isnull()]['Country'].value_counts()
-print("\nCountries with missing CustomerID:\n", missing_countries)
-
-check_missing['MonthYear'] = df['InvoiceDate'].dt.to_period('M')
-# Count missing CustomerID per month
-missing_by_month = check_missing[check_missing['CustomerID'].isnull()]['MonthYear'].value_counts().sort_index()
-print(missing_by_month)
-
-```
 ![Missing Values Screenshot](https://drive.google.com/uc?id=1nuU1tQSycOyaYMbv3agmEpGy3MgWBl7T)
 
 👉 **Dealing with missing and duplicate data**
 - **Missing values:** Only customerID is missing -> Doing RFM model need to group based on CustomerID --> **Drop** 25% missing value in CustomerID col
 - **Duplicate data:** **drop** duplicated rows
-
-```
-# Missing values
-df = df.dropna(subset=['CustomerID'])
-# Duplicated rows
-df_clean = df.drop_duplicates().copy()
-df_clean.isnull().sum()
-```
 
 ## 2️⃣ RFM Analysis Preprocess
 ### 🔷 RFM Calculation
