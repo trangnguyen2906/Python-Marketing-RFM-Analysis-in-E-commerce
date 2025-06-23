@@ -11,7 +11,7 @@
 
 A **global e-commerce company** faced challenges in **targeting customer segments effectively**. The Marketing team wanted to reward loyal customers and identify those with high potential. However, customer segmentation was still done **manually in Excel**, which was **time-consuming** and **insufficient** for **large-scale strategy**.
 
-### Objective:
+### 📘 Objective:
 ### 📖 What is this project about? What Business Question will it solve?
 
 This project uses Python to segment customers using the **RFM (Recency – Frequency – Monetary) model** , a proven marketing analysis technique that evaluates customers based on:
