@@ -390,7 +390,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://drive.google.com/uc?id=1AQRoddcZa7PmMbnHXI5NPplu57Im0odG" width="700"/>
+  <img src="https://drive.google.com/uc?id=1AQRoddcZa7PmMbnHXI5NPplu57Im0odG" width="1000"/>
 </p>
 
 🔍 **Key Findings:**
