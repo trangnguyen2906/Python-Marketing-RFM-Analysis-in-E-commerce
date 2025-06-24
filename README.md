@@ -158,17 +158,17 @@ RFM_df.head()
 - Each R, F, and M value was scored from **1 to 5 using quintile-based ranking**:
 Quantile-based ranking divides a numerical feature into equal-sized groups, in this case, into 5 groups (quintiles). Each customer is assigned a score from **1 to 5** based on the quintile their value falls into:
 
-**- Recency:**
+- **Recency:**
 
-+ Customers with **lower recency (more recent purchases)** are assigned a **higher score (5)**.
-
-+ The most recent 20% of customers get score 5, the next 20% get 4, and so on down to 1.
+  + Customers with **lower recency (more recent purchases)** are assigned a **higher score (5)**.
+  
+  + The most recent 20% of customers get score 5, the next 20% get 4, and so on down to 1.
 
 - **Frequency & Monetary:**
 
-+ Customers with **higher values** (more orders or more spending) get **higher scores.**
-
-+ The top 20% (most frequent/spending customers) get 5, and the lowest 20% get 1.
+  + Customers with **higher values** (more orders or more spending) get **higher scores.**
+  
+  + The top 20% (most frequent/spending customers) get 5, and the lowest 20% get 1.
 - Scores were concatenated into a **3-digit RFM** score
 
 ```python
