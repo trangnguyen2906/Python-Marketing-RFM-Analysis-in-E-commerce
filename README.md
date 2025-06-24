@@ -187,40 +187,19 @@ RFM_df
 <details>
 <summary>🧩 <strong>RFM Score to Segment Mapping</strong></summary>
 
-The scores are then mapped to behavioral segments such as:
-
-- **Champions**: `555`, `554`, `544`, etc.  
-  → Purchased recently, buy frequently, and spend the most.
-
-- **Loyal Customers**: `543`, `444`, `435`, etc.  
-  → Buy often and spend well, but not always very recent.
-
-- **Potential Loyalists**: `553`, `552`, `551`, etc.  
-  → Recent customers who show promise with high spend/frequency.
-
-- **New Customers**: `512`, `511`, `422`, etc.  
-  → Recently acquired but haven’t bought often yet.
-
-- **Promising**: `525`, `524`, `523`, etc.  
-  → Moderate engagement and value, showing potential.
-
-- **Need Attention**: `535`, `534`, `434`, etc.  
-  → Previously valuable but may be slipping.
-
-- **About to Sleep**: `331`, `321`, `312`, etc.  
-  → Low engagement, at risk of churning.
-
-- **At Risk**: `255`, `254`, `245`, etc.  
-  → Once valuable but now inactive.
-
-- **Cannot Lose Them**: `155`, `154`, `144`, etc.  
-  → High past value but very poor recent activity.
-
-- **Hibernating Customers**: `332`, `322`, `233`, etc.  
-  → Low frequency and spending, not recent.
-
-- **Lost Customers**: `111`, `112`, `121`, etc.  
-  → Haven’t purchased in a long time with low value.
+| Segment | Icon | Example RFM Scores | Description |
+|--------|------|---------------------|-------------|
+| **Champions** | 🏆 | `555`, `554`, `544`, `545` | Recent, frequent, and high-spending customers — your best customers. |
+| **Loyal Customers** | 💎 | `543`, `444`, `435`, `355` | Buy often and spend well, but not always very recent. |
+| **Potential Loyalists** | 🌱 | `553`, `552`, `551`, `541` | Recent customers with good frequency or monetary value — likely to become loyal. |
+| **New Customers** | 🆕 | `512`, `511`, `422`, `421` | Recently made their first few purchases — welcome them onboard. |
+| **Promising** | ✨ | `525`, `524`, `523`, `522` | Moderate recent activity and value — nurture them. |
+| **Need Attention** | 👀 | `535`, `534`, `443`, `434` | Previously valuable, now showing signs of disengagement. |
+| **About to Sleep** | 😴 | `331`, `321`, `312`, `221` | Low frequency, moderate spending — risk of churn. |
+| **At Risk** | ⚠️ | `255`, `254`, `245`, `244` | Used to be good customers but haven’t returned recently. |
+| **Cannot Lose Them** | 🚨 | `155`, `154`, `144`, `214` | High past value but highly inactive — take action. |
+| **Hibernating** | 🛌 | `332`, `322`, `233`, `232` | Inactive, low spend — test with reactivation campaigns. |
+| **Lost Customers** | ❌ | `111`, `112`, `121`, `131` | Haven’t purchased in a long time and low value — lowest priority. |
 
 </details>
 
