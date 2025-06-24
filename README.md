@@ -390,12 +390,12 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1fj1IMV-yaQvx63Z3I8SzZPhnGElFg5Rz" />
+  <img src="https://drive.google.com/uc?export=view&id=1fj1IMV-yaQvx63Z3I8SzZPhnGElFg5Rz" width="700" />
 </p>
 
 
 <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1vRvKXjU1t3zZ0jSPzo811jJws_e3fKuO" width="800" />
+  <img src="https://drive.google.com/uc?export=view&id=1vRvKXjU1t3zZ0jSPzo811jJws_e3fKuO" width="900" />
 </p>
 
 🔍 **Key Findings:**
