@@ -224,7 +224,7 @@ RFM_df_merge
   
 ### 🔷 Visual Insights
 
-#### 🔹 1. Examine Distribution of RFM Metrics
+### 🔹 1. Examine Distribution of RFM Metrics
 > 🎯 **Goal:** Understand general behavior across Recency, Frequency, and Monetary metrics to identify broad customer patterns.
 
 ```python
@@ -259,7 +259,7 @@ plt.show()
 - ⏱️ **Recency:** Most customers made purchases within the last **50 days**, showing strong short-term engagement. However, there's a long tail of users who **haven't returned for 6+ months**.
 - 💰 **Monetary:** Spending is highly skewed. **Most customers** **spend little**, while a small number of high-value outliers generate the majority of revenue.
   
-#### 🔹 2. Segment Distribution by Count and Revenue
+### 🔹 2. Segment Distribution by Count and Revenue
 > 🎯 **Goal:** Compare customer segments based on their **population size** and **revenue contribution** to identify which groups are most valuable and which ones require re-evaluation.
 
 ```python
@@ -319,7 +319,7 @@ plt.show()
 - **💸 Revenue Contribution:** **Over 60%** of total revenue comes from **Champions alone**, followed by **Loyal and Need Attention** groups. Many segments (like Lost or New Customers) contribute little revenue despite notable size.
 - ⚠️ Strategic Gap: Some segments with high population (Hibernating, At Risk) offer low return, indicating **poor engagement or lack of effective retention strategies.**
 
-#### 🔹 3. Group Segments for Marketing Campaign Strategy
+### 🔹 3. Group Segments for Marketing Campaign Strategy
 
 🎯 **Goal**: Reorganize the 11 original RFM segments into **3 broader customer groups** to simplify targeting and align marketing efforts with customer value and potential.
 
@@ -357,7 +357,7 @@ plt.show()
 
 - ⚠️ **Group 3 – At Risk & Lost Customers**: At Risk, Cannot Lose Them, Hibernating, Lost, and About to Sleep segments. Low engagement or long inactivity. Costly to re-engage with uncertain returns.
 
-#### 🔹 4. Correlation Between RFM Metrics in Each Group
+### 🔹 4. Correlation Between RFM Metrics in Each Group
 > 🎯 Goal: Analyze how Recency, Frequency, and Monetary values relate to each other within different customer groups to uncover consistent behavioral patterns or weak links.
 
 ![Recency Frequency Monetary AOV by Segment](https://drive.google.com/uc?id=1dl3XB0mKmQQtvl2KaEZyM_M7Ma8unNEo)
@@ -366,7 +366,7 @@ plt.show()
 🔍 **Key Findings:**
 Loyal & VIP Customers show a quite strong positive Frequency–Monetary **correlation (crl = 0.55)**, while Potential Customers show no clear RFM relationships, indicating inconsistent and less predictable behavior.
 
-#### 🔹 5. Convert Potential Customers → Loyal Customers
+### 🔹 5. Convert Potential Customers → Loyal Customers
 > 🎯 Goal: Identify key behavioral gaps between mid-tier segments and top-performing customers to guide conversion strategies for turning potential customers into loyal ones.
 
 🧠 To do this, I compare mean and median values of Recency, Frequency, and Monetary, along with AOV (Average Order Value) to gain reliable insights into typical behavior (median) while still capturing value outliers (mean). This helps prioritize which segments have untapped value and how to upgrade them effectively.
