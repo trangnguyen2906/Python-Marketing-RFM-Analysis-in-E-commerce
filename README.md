@@ -248,7 +248,9 @@ ax.set(xlabel='Monetary', ylabel='Distribution', xlim = (-1000,15000), title='Di
 plt.show()
 ```
 
-![AOV by Segment](https://drive.google.com/uc?id=1v-cwnyVyOjP-4WtEhvFOHAtKQiOGvaEa)
+![RFM Segmentation Chart](https://drive.google.com/uc?export=view&id=1ifkdRC4fwjxbZevRMHQJ9SnNHB7Wy2im)
+
+![RFM Segment Distribution](https://drive.google.com/uc?export=view&id=1AXHH1bvS9OIy7k1Qzrn4lh3qKGQeaC3r)
 
 **🔍 Key Findings:**
 - 🔁 **Frequency:** Over **70%** of customers made **only one - two purchase**, revealing a significant retention issue and low repeat-buy behavior. **(KEY WEAKNESSES)**
