@@ -180,7 +180,7 @@ RFM_df['RFM_score'] = RFM_df['R_score'] + RFM_df['F_score'] + RFM_df['M_score']
 RFM_df
 
 ```
-![RFM Score](https://drive.google.com/uc?id=1b4zG2HlHBdus8rf-uboPDpEUC7-5YLDV)
+![Quantile Explanation](https://drive.google.com/uc?export=view&id=1MGR3ZP6ShzpsTrd4RCWYcrPxepyClluE)
 
 
 ## 3️⃣ Customer Segmentation & Visualization
