@@ -248,7 +248,9 @@ ax.set(xlabel='Monetary', ylabel='Distribution', xlim = (-1000,15000), title='Di
 plt.show()
 ```
 
-![RFM Segmentation Chart](https://drive.google.com/uc?export=view&id=1ifkdRC4fwjxbZevRMHQJ9SnNHB7Wy2im)
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1ifkdRC4fwjxbZevRMHQJ9SnNHB7Wy2im" width="500"/>
+</p>
 
 ![RFM Segment Distribution](https://drive.google.com/uc?export=view&id=1AXHH1bvS9OIy7k1Qzrn4lh3qKGQeaC3r)
 
