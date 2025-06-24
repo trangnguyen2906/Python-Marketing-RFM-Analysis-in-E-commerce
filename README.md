@@ -320,12 +320,20 @@ plt.show()
 - ⚠️ Strategic Gap: Some segments with high population (Hibernating, At Risk) offer low return, indicating **poor engagement or lack of effective retention strategies.**
 
 #### 🔹 3. Group Segments for Marketing Campaign Strategy
-> **🎯 Goal:** Reorganize the 11 original RFM segments into **3 broader customer groups** to simplify targeting and align marketing efforts with customer value and potential.
 
-1. **Loyal & VIP Customers:** Champions, Loyal (R&F_score = 4/5; Contribute apprxml 75% of total revenue)
-2. **Potential Customers:** Potential Loyalist, Promising, Need Attention, New Customers (R&F score moderate->high 2,3,4,5 -- lower share of revenue but strong potential)
-3. **At Risk & Lost Customers:** At Risk, Cannot Lose Them, Hibernating Customers, Lost Customers, About To Sleep (low recency score -> haven't purchased for long time)
+🎯 **Goal**: Reorganize the 11 original RFM segments into **3 broader customer groups** to simplify targeting and align marketing efforts with customer value and potential.
 
+**1.** **Loyal & VIP Customers**:  
+   Champions, Loyal  
+   *(R & F scores = 4/5; contribute approximately 75% of total revenue)*
+
+**2.** **Potential Customers**:  
+   Potential Loyalist, Promising, Need Attention, New Customers  
+   *(Moderate to high R & F scores: 2, 3, 4, 5 — lower share of revenue but strong potential)*
+
+**3.** **At Risk & Lost Customers**:  
+   At Risk, Cannot Lose Them, Hibernating Customers, Lost Customers, About To Sleep  
+   *(Low recency score — haven’t purchased for a long time)*
 
 ```python
 def regroup_segment(segment):
