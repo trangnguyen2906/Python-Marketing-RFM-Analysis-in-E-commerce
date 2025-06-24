@@ -292,28 +292,6 @@ axes[1].set_xlabel('Customer Segment')
 axes[1].set_ylabel('Number of Customers')
 axes[1].tick_params(axis='x', rotation=45)
 
-# Add data labels
-for p in bar.patches:
-    height = p.get_height()
-    axes[1].text(p.get_x() + p.get_width() / 2,
-                 height + 10,
-                 f'{height:.0f}',
-                 ha='center',
-                 fontsize=9)
-
-plt.tight_layout()
-plt.show()
-
-
-Monetary_total = RFM_df_merge.groupby('Segment')['Monetary'].sum()
-
-# Tính tổng Monetary toàn bộ
-total = RFM_df_merge['Monetary'].sum()
-
-# Tạo labels với % đóng góp
-labels = [f"{seg}\n ({count*100/total:.1f}%)"
-          for seg, count in zip(Monetary_total.index, Monetary_total.values)]
-
 # Treemap
 plt.figure(figsize=(14, 8))
 squarify.plot(
@@ -328,9 +306,15 @@ plt.axis('off')
 plt.show()
 ```
 
-![Customer Group Bar Chart](https://drive.google.com/uc?id=1FcqxoLfj30XNowr3GhmQb00Ng8TehSaf)
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1Ia3SZA9J6Y0AoaWTLXZUbLAU26sXvneY" />
+</p>
 
-🔍 Key Findings:
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1v5XzgdM2nDMf8RFI8XzuaaBrRRC4f5mX" width="500" />
+</p>
+
+**🔍 Key Findings:**
 - 👥 **Customer Count:** The majority of customers fall into **mid-tier segments** like **Need Attention, Potential Loyalists, and At Risk**, suggesting potential for growth or re-engagement.
 - **💸 Revenue Contribution:** **Over 60%** of total revenue comes from **Champions alone**, followed by **Loyal and Need Attention** groups. Many segments (like Lost or New Customers) contribute little revenue despite notable size.
 - ⚠️ Strategic Gap: Some segments with high population (Hibernating, At Risk) offer low return, indicating **poor engagement or lack of effective retention strategies.**
