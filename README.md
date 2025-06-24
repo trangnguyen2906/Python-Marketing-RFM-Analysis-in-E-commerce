@@ -184,6 +184,46 @@ RFM_df
 ### 🔷 Segment Customers
 - Customers were divided into **11 RFM-based segments** (e.g., 🏆 Champions, 🌱 Potential Loyalists, ⚠️ At Risk) to guide **personalized marketing and loyalty-focused strategies.**
 
+<details>
+<summary>🧩 <strong>RFM Score to Segment Mapping</strong></summary>
+
+The scores are then mapped to behavioral segments such as:
+
+- **Champions**: `555`, `554`, `544`, etc.  
+  → Purchased recently, buy frequently, and spend the most.
+
+- **Loyal Customers**: `543`, `444`, `435`, etc.  
+  → Buy often and spend well, but not always very recent.
+
+- **Potential Loyalists**: `553`, `552`, `551`, etc.  
+  → Recent customers who show promise with high spend/frequency.
+
+- **New Customers**: `512`, `511`, `422`, etc.  
+  → Recently acquired but haven’t bought often yet.
+
+- **Promising**: `525`, `524`, `523`, etc.  
+  → Moderate engagement and value, showing potential.
+
+- **Need Attention**: `535`, `534`, `434`, etc.  
+  → Previously valuable but may be slipping.
+
+- **About to Sleep**: `331`, `321`, `312`, etc.  
+  → Low engagement, at risk of churning.
+
+- **At Risk**: `255`, `254`, `245`, etc.  
+  → Once valuable but now inactive.
+
+- **Cannot Lose Them**: `155`, `154`, `144`, etc.  
+  → High past value but very poor recent activity.
+
+- **Hibernating Customers**: `332`, `322`, `233`, etc.  
+  → Low frequency and spending, not recent.
+
+- **Lost Customers**: `111`, `112`, `121`, etc.  
+  → Haven’t purchased in a long time with low value.
+
+</details>
+
 ```python
 #Segment Customers
 segment = pd.read_csv('/content/drive/MyDrive/UNIGAP/Python/Final Project/segmentation.csv')
