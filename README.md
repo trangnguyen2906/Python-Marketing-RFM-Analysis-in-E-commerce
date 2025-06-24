@@ -401,34 +401,50 @@ plt.show()
 🔍 **Key Findings:**
 - 📅 **Recency:** Potential Loyalists and New Customers made relatively recent purchases, similar to Loyal customers, indicating recent engagement and reactivation potential.
 - 💸 **Monetary & AOV:** Despite lower frequency, AOV for Potential Loyalists is fairly strong. This suggests they’re willing to spend but need encouragement to buy more often.
-
+  
 ---
 
-## 🔎 Final Conclusion & Recommendations  
+## 📌 Final Conclusion & Recommendations
 
-👉🏻 Based on the RFM analysis and behavioral insights above, I would recommend the following targeted strategies to the Marketing Team and the CRM Team:
+👉🏻 **Based on the RFM analysis and behavioral insights**, I recommend the following targeted strategies to the **Marketing Team** and the **CRM Team**:
 
-📌 Recommendations for the **Marketing Team** to run effective gratitude campaign: should focus on **high-impact segments** and **deploy tailored campaign methods**
+### 🌸 **Recommendations for the Marketing Team**  
+To run an effective gratitude campaign, the focus should be on **high-impact segments** and **tailored campaign methods**.
 
-✔️ **Campaign Target Priorities:** Focus loyalty and gratitude campaigns on Champions and Loyal customers (Group 1)
-- Why: Small in size but contribute ~75% of total revenue
-- Strategy: Send VIP appreciation gifts, early product access, birthday discounts, or tiered loyalty perks
-- 🎯: Reinforce trust and maximize retention, encouraging repeat purchases and advocacy.
 
-✔️ Run Gratitude Campaigns for Group 2 – Potential Customers
-- Why: Strong Average Order Value (AOV) but have low purchase frequency, indicating untapped potential.
-- Some tactics: Email remarketing and personalized follow-up after first or second purchase(💌 Send thank-you messages); Limited-time discounts or “Buy again and save” offers.
-- 🎯: Encourage repeat behavior, nudge toward loyalty, and acknowledge early engagement
+### ✅ **Campaign Target Priorities**:  
+Focus loyalty and gratitude campaigns on **Champions** and **Loyal customers (Group 1)**
 
-❌ Do NOT Run Gratitude Campaigns for Group 3 – At Risk & Lost Customers
-- Why: These users are inactive, show long gaps in activity, and contribute little revenue.
+- **Why**: Small in size but **contribute ~75% of total revenue**
+- **Strategy**: Send **VIP appreciation gifts**, **early product access**, **birthday discounts**, or **tiered loyalty perks**
+- 🎯 **Goal**: **Reinforce trust**, **maximize retention**, and encourage **repeat purchases and advocacy**
 
-📌 Recommendations for CRM team to turn Potential Customer group into Loyal Customer goup -- improve Frequency (Key)
 
-✔️ Automate Post-Purchase Journeys: Trigger email/SMS after first or second purchase: “Thanks for buying! Get 10% off your next order” -> Drive 2nd/3rd purchases and build habit.
+### 💜 Run Gratitude Campaigns for Group 2 – **Potential Customers**
 
-✔️ Personalized product suggestions.
+- **Why**: **Strong Average Order Value (AOV)** but **low purchase frequency**, indicating **untapped potential**
+- **Tactics**:  
+  - **Email remarketing**  
+  - **Personalized follow-up** after first or second purchase (💌 send thank-you messages)  
+  - **Limited-time discounts** or **“Buy again and save”** offers  
+- 🎯 **Goal**: Encourage **repeat behavior**, nudge toward **loyalty**, and acknowledge **early engagement**
 
-✔️ Show Progress Toward Rewards: E.g.“1 order away from VIP”  -> Use psychological momentum to increase purchase frequency.
+
+### ❌ **Do NOT Run Gratitude Campaigns for Group 3 – At Risk & Lost Customers**
+
+- **Why**: These users are **inactive**, show **long gaps in activity**, and **contribute little revenue**
+
+
+### 🌟 **Recommendations for CRM Team**  
+Focus on turning **Potential Customers** into **Loyal Customers** by improving **Frequency** (key metric).
+
+- ⚙️ **Automate Post-Purchase Journeys**:  
+  Trigger email/SMS after first or second purchase:  
+  _“Thanks for buying! Get 10% off your next order”_ → Drives **2nd/3rd purchases** and helps **build habit**
+
+- 🛍️ **Personalized product suggestions**
+
+- 📈 **Show Progress Toward Rewards**:  
+  E.g., _“1 order away from VIP”_ → Use **psychological momentum** to **increase purchase frequency**
 
   
