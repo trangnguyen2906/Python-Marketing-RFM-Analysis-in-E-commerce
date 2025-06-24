@@ -389,7 +389,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-![Segment Comparison Summary](https://drive.google.com/uc?id=1AQRoddcZa7PmMbnHXI5NPplu57Im0odG)
+<p align="center">
+  <img src="https://drive.google.com/uc?id=1AQRoddcZa7PmMbnHXI5NPplu57Im0odG" width="700"/>
+</p>
 
 🔍 **Key Findings:**
 - 📅 **Recency:** Potential Loyalists and New Customers made relatively recent purchases, similar to Loyal customers, indicating recent engagement and reactivation potential.
